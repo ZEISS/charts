@@ -1,6 +1,6 @@
 apiVersion: v2
 name: serving
-version: 1.15.1
+version: 1.15.2
 kubeVersion: ">=1.28.0"
 description: "Knative Serving"
 sources:
