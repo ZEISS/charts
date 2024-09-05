@@ -1,0 +1,27 @@
+apiVersion: v1
+entries:
+  knative:
+  - apiVersion: v2
+    appVersion: v1.15.2
+    created: "2024-09-05T20:19:27.624165586Z"
+    dependencies:
+    - condition: eventing.enabled
+      name: eventing
+      repository: ""
+      version: 1.15.2
+    - condition: serving.enabled
+      name: serving
+      repository: ""
+      version: 1.15.2
+    description: 'Kubernetes-based platform to build, deploy, and manage modern serverless
+      workloads '
+    digest: 1a6b3219d8b831bee5b021cec0a40366d886f363fd5f7045062f638e95d97442
+    home: https://knative.dev/
+    icon: https://raw.githubusercontent.com/knative/docs/master/docs/images/logo/rgb/knative-logo-rgb.jpg
+    maintainers:
+    - name: katallaxie
+    name: knative
+    urls:
+    - https://ZEISS.github.io/charts/knative-1.15.2.tgz
+    version: 1.15.2
+generated: "2024-09-05T20:19:27.620276393Z"
