@@ -1,37 +1,38 @@
 {
-    "name": "zeiss/charts",
-    "build": {
-      "dockerfile": "Dockerfile",
-      // Update 'VARIANT' to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
-      // Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
-      "args": {
-        "VARIANT": "ubuntu-22.04"
-      }
+  "name": "zeiss/charts",
+  "build": {
+    "dockerfile": "Dockerfile",
+    // Update 'VARIANT' to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
+    // Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
+    "args": {
+      "VARIANT": "ubuntu-22.04"
+    }
+  },
+  "runArgs": [
+    "--add-host=host.docker.internal:host-gateway"
+  ],
+  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+  "postCreateCommand": "bash scripts/postCreateCommand.sh",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/java:1": {},
+    "ghcr.io/dhoeric/features/k9s:1": {},
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.vscode-github-actions",
+        "ms-vscode.makefile-tools"
+      ]
     },
-    "runArgs": [
-      "--add-host=host.docker.internal:host-gateway"
-    ],
-    "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
-    "postCreateCommand": "bash scripts/postCreateCommand.sh",
-    "features": {
-      "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-      "ghcr.io/devcontainers/features/java:1": {},
-      "ghcr.io/dhoeric/features/k9s:1": {}
-    },
-    "customizations": {
-      "vscode": {
-        "extensions": [
-          "GitHub.copilot",
-          "GitHub.vscode-github-actions",
-          "ms-vscode.makefile-tools"
-        ]
-      },
-      "codespaces": {
-        "repositories": {
-          "zeiss/charts": {
-            "permissions": "write-all"
-          }
+    "codespaces": {
+      "repositories": {
+        "zeiss/charts": {
+          "permissions": "write-all"
         }
       }
     }
   }
+}
