@@ -58,9 +58,9 @@ export HELM_DATA_HOME=$(HELM_DIR)/data
 # Chart Testing configuration
 # ----------------------------------------------------------------------------------------------------------------------
 
-export CT_LINT_CONF=config/ct/lintconf.yaml
-export CT_CHART_YAML_SCHEMA=config/ct/chart_schema.yaml
-export CT_CONFIG=config/ct/config.yaml
+export CT_LINT_CONF=config/ct/lintconf.yml
+export CT_CHART_YAML_SCHEMA=config/ct/chart_schema.yml
+export CT_CONFIG=config/ct/config.yml
 # ----------------------------------------------------------------------------------------------------------------------
 # Git configuration
 # ----------------------------------------------------------------------------------------------------------------------
