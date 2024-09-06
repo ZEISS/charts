@@ -23,7 +23,7 @@ PATCH_2_FIX=$'logging.request-log-template: \'{"httpRequest": {"requestMethod": 
 # Base URLs
 SERVING_URL=https://github.com/knative/serving/releases/download/knative-v${SERVING_TAG}
 EVENTING_URL=https://github.com/knative/eventing/releases/download/knative-v${EVENTING_TAG}
-OPERATOR_URL=https://github.com/knative/operator/releases/download/knative-v${OPERATOR_TAG}/operator.yaml
+OPERATOR_URL=https://github.com/knative/operator/releases/download/knative-v${OPERATOR_TAG}
 
 # Get all files, auto-apply PodDisruptionBudget patches
 curl -sSL ${SERVING_URL}/serving-crds.yaml > charts/serving/crds/serving-crds.yaml
@@ -32,6 +32,8 @@ curl -sSL ${SERVING_URL}/serving-hpa.yaml > charts/serving/templates/serving-hpa
 
 curl -sSL ${EVENTING_URL}/eventing-crds.yaml > charts/eventing/crds/eventing-crds-temp.yaml
 curl -sSL ${EVENTING_URL}/eventing.yaml | sed -e 's/minAvailable: 80%/maxUnavailable: 1/g' > charts/eventing/templates/eventing-1.yaml
+
+curl -sSL ${OPERATOR_URL}/operator.yaml > charts/operator/templates/operator.yaml
 
 # Indentation patches
 sed 's/        name: v1/      name: v1/g' charts/eventing/templates/eventing-1.yaml | sed -e 's/        served: true/      served: true/' | sed -e 's/        storage: true/      storage: true/g' > charts/eventing/templates/eventing-temp.yaml

@@ -2,9 +2,9 @@ apiVersion: v2
 name: operator
 version: 1.15.4
 kubeVersion: ">=1.28.0"
-description: "Knative Serving"
+description: "Knative Operator"
 sources:
-- https://github.com/knative/serving
+- https://github.com/knative/operator
 maintainers:
 - name: katallaxie
 appVersion: "v1.15.4"
