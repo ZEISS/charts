@@ -1,4 +1,4 @@
-# ZEIS Helm Charts
+# ZEISS Helm Charts
 
 ## Staging
 
