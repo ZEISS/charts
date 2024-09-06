@@ -7,6 +7,7 @@ on:
       - "staging/**"
       - "stable/**"
       - ".github/workflows/publish.yml"
+  workflow_dispatch:
 
 jobs:
   charts:
