@@ -1,0 +1,11 @@
+# -- Configure the Knative Operator.
+
+# -- Knative Serving
+serving:
+  # -- Enable Knative Serving
+  enabled: true
+
+# -- Knative Eventing
+eventing:
+  # -- Enable Knative Eventing
+  enabled: true

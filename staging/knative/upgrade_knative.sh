@@ -11,6 +11,7 @@ shopt -s dotglob
 # Tags for current version of knative
 SERVING_TAG=1.15.2
 EVENTING_TAG=1.15.1
+OPERATOR_TAG=1.15.4
 
 # Two basic patches needed for helm linter
 PATCH_1=$'# eg. \'{{.Name}}-{{.Namespace}}.{{ index .Annotations "sub"}}.{{.Domain}}\''
@@ -22,6 +23,7 @@ PATCH_2_FIX=$'logging.request-log-template: \'{"httpRequest": {"requestMethod": 
 # Base URLs
 SERVING_URL=https://github.com/knative/serving/releases/download/knative-v${SERVING_TAG}
 EVENTING_URL=https://github.com/knative/eventing/releases/download/knative-v${EVENTING_TAG}
+OPERATOR_URL=https://github.com/knative/operator/releases/download/knative-v${OPERATOR_TAG}/operator.yaml
 
 # Get all files, auto-apply PodDisruptionBudget patches
 curl -sSL ${SERVING_URL}/serving-crds.yaml > charts/serving/crds/serving-crds.yaml
