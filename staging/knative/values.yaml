@@ -1,3 +1,4 @@
+# -- Global configuration for Knative.
 global:
   serviceLabels: {}
   priorityClassName: ""
