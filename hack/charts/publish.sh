@@ -10,7 +10,7 @@ DRY_RUN="${DRY_RUN:-true}"
 
 ## CT related variables to be used in the script.
 CT_CHART_DIRS="${CT_CHART_DIRS:-"stable,staging"}"
-CT_TARGET_BRANCH="${CT_TARGET_BRANCH:-"master"}"
+CT_TARGET_BRANCH="${CT_TARGET_BRANCH:-"main"}"
 CT_SINCE="${CT_SINCE:-"HEAD~1"}"
 
 ## Repository related variables to be used in the script.

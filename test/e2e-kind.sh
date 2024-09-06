@@ -172,7 +172,7 @@ install_elasticsearch() {
 replace_priority_class_name_system_x_critical() {
     # only change if needed
     set +o pipefail
-    REPLACE_CHARTS=$(set -o pipefail; git diff --name-only "$(git merge-base $GIT_REMOTE_NAME/master HEAD)" -- stable staging | { grep -E "(stable/)(aws|local|azure|gcp)" || test $? = 1; } | xargs -I {} dirname {} | sort | uniq)
+    REPLACE_CHARTS=$(set -o pipefail; git diff --name-only "$(git merge-base $GIT_REMOTE_NAME/main HEAD)" -- stable staging | { grep -E "(stable/)(aws|local|azure|gcp)" || test $? = 1; } | xargs -I {} dirname {} | sort | uniq)
     set -o pipefail
     if [[ -n ${REPLACE_CHARTS} ]]; then
       echo 'Replacing priorityClassName: system-X-critical'
