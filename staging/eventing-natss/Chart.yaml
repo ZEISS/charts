@@ -1,0 +1,14 @@
+apiVersion: v2
+name: eventing-natss
+version: 1.0.0
+description: |
+  A channel layer for Knative Eventing that uses NATS Streaming as the underlying messaging system.
+home: https://github.com/knative-extensions/eventing-natss
+maintainers:
+  - name: katallaxie
+icon: https://raw.githubusercontent.com/nats-io/nats-server/main/logos/nats-server.png
+appVersion: "v1.15.0"
+dependencies:
+  - name: nats
+    version: 1.15.1
+    condition: eventing.enabled

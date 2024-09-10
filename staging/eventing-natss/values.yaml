@@ -1,0 +1,9 @@
+# -- Global configuration for Knative.
+global:
+  serviceLabels: {}
+  priorityClassName: ""
+
+# -- Configure the eventing NATS channel layer.
+eventing:
+  # -- Enable the Knative Operator.
+  enabled: true

@@ -1,0 +1,10 @@
+apiVersion: v2
+name: eventing-natss
+version: 1.15.1
+kubeVersion: ">=1.28.0"
+description: "Eventing NATS"
+sources:
+  - https://github.com/knative-extensions/eventing-natss
+maintainers:
+  - name: katallaxie
+appVersion: "v1.15.0"
