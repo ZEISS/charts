@@ -1,5 +1,25 @@
 apiVersion: v1
 entries:
+  eventing-natss:
+  - apiVersion: v2
+    appVersion: v1.15.0
+    created: "2024-09-10T19:28:27.868751277Z"
+    dependencies:
+    - condition: eventing.enabled
+      name: nats
+      repository: ""
+      version: 1.15.1
+    description: 'A channel layer for Knative Eventing that uses NATS Streaming as
+      the underlying messaging system. '
+    digest: da523b81804ec868a18b6c0bf0c9fdeb41a790ddc61bb7d5376b337ed541f14c
+    home: https://github.com/knative-extensions/eventing-natss
+    icon: https://raw.githubusercontent.com/nats-io/nats-server/main/logos/nats-server.png
+    maintainers:
+    - name: katallaxie
+    name: eventing-natss
+    urls:
+    - https://ZEISS.github.io/charts/staging/staging/eventing-natss-1.0.0.tgz
+    version: 1.0.0
   knative:
   - apiVersion: v2
     appVersion: v1.15.4
@@ -20,4 +40,4 @@ entries:
     urls:
     - https://ZEISS.github.io/charts/staging/knative-1.0.0.tgz
     version: 1.0.0
-generated: "2024-09-10T16:52:49.575734316Z"
+generated: "2024-09-10T19:28:27.868066991Z"
