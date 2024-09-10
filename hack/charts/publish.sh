@@ -119,7 +119,7 @@ upload() {
     # Copy all charts from the temporary directory to the charts repository and update the index
     if [[ -f "${chartDir}/index.yaml" ]]; then
       echo "Found index for ${chartDir}. merging changes..."
-      helm repo index "${CHARTS_TMP_DIR}" --url "${HELM_CHARTS_URL}/${chartDir}" --merge "${chartDir}/index.yaml"
+      helm repo index "${CHARTS_TMP_DIR}" --url "${HELM_CHARTS_URL}" --merge "${chartDir}/index.yaml"
       mv -f "${CHARTS_TMP_DIR}/${chartDir}"/*.tgz "${chartDir}"
       mv -f "${CHARTS_TMP_DIR}/index.yaml" "${chartDir}/index.yaml"
     else
