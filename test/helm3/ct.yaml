@@ -6,6 +6,6 @@ chart-dirs:
 excluded-charts:
   - common
 chart-repos:
-  - zeiss-staging=https://zeiss.github.io/charts/staging
-  - zeiss-stable=https://zeiss.github.io/charts/stable
+  - zeiss-staging=https://zeiss.github.io/charts
+  - zeiss-stable=https://zeiss.github.io/charts
 helm-extra-args: --timeout 600s
