@@ -3,7 +3,12 @@ global:
   serviceLabels: {}
   priorityClassName: ""
 
-# -- Configure the eventing NATS channel layer.
+# -- Knative Serving
+serving:
+  # -- Enable Knative Serving
+  enabled: true
+
+# -- Knative Eventing
 eventing:
-  # -- Enable the Knative Operator.
+  # -- Enable Knative Eventing
   enabled: true
