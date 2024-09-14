@@ -12,7 +12,7 @@ shopt -s dotglob
 NATS_TAG=1.15.0
 
 # Base URLs
-NATS_URL=https://github.com/knative-extensions/eventing-natss/releases/download/knative-${NATS_TAG}
+NATS_URL=https://github.com/knative-extensions/eventing-natss/releases/download/knative-v${NATS_TAG}
 
 # Get all files, auto-apply PodDisruptionBudget patches
 curl -sSL ${NATS_URL}/eventing-natss.yaml > charts/nats/templates/eventing-natss.yaml
