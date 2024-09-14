@@ -7,15 +7,3 @@ global:
 operator:
   # -- Enable the Knative Operator.
   enabled: true
-
-# -- Knative Serving
-serving:
-  # -- Enable Knative Serving
-  enabled: true
-  # --- Enable Kourier as the default networking layer
-  kourier: true
-
-# -- Knative Eventing
-eventing:
-  # -- Enable Knative Eventing
-  enabled: true
