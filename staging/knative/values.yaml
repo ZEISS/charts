@@ -12,6 +12,8 @@ operator:
 serving:
   # -- Enable Knative Serving
   enabled: true
+  # --- Enable Kourier as the default networking layer
+  kourier: true
 
 # -- Knative Eventing
 eventing:

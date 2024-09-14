@@ -11,9 +11,13 @@ metadata:
   namespace: knative-serving
 spec:
   ingress:
+    {{- if .Values.serving.kourier }}
     kourier:
       enabled: true
+    {{- end }}
   config:
     network:
+      {{- if .Values.serving.kourier }}
       ingress-class: "kourier.ingress.networking.knative.dev"
+      {{- end }}
 {{- end }}
