@@ -1,0 +1,19 @@
+# -- Global configuration for Knative.
+global:
+  serviceLabels: {}
+  priorityClassName: ""
+
+# -- Knative Serving
+serving:
+  # -- Enable Knative Serving
+  enabled: true
+
+# -- Knative Eventing NATS Streaming
+natss:
+  # -- Enable Knative Eventing NATS Streaming
+  enabled: false
+
+# -- Knative Eventing NATS JetStream
+jsm:
+  # -- Enable Knative Eventing NATS JetStream
+  enabled: true

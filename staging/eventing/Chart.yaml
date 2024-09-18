@@ -1,5 +1,5 @@
 apiVersion: v2
-name: eventing-natss
+name: eventing
 version: 1.0.1
 description: |
   A channel layer for Knative Eventing that uses NATS Streaming as the underlying messaging system.
@@ -9,6 +9,9 @@ maintainers:
 icon: https://raw.githubusercontent.com/nats-io/nats-server/main/logos/nats-server.png
 appVersion: "v1.15.0"
 dependencies:
-  - name: nats
+  - name: eventing-jsm
     version: 1.15.2
-    condition: eventing.enabled
+    condition: jsm.enabled
+  - name: eventing-natss
+    version: 1.15.2
+    condition: natss.enabled

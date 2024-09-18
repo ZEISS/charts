@@ -1,8 +1,8 @@
 apiVersion: v2
-name: nats
+name: eventing-natss
 version: 1.15.2
 kubeVersion: ">=1.28.0"
-description: "Eventing NATS"
+description: "NATS Eventing with Streaming"
 sources:
   - https://github.com/knative-extensions/eventing-natss
 maintainers:
