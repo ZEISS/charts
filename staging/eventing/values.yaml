@@ -8,6 +8,11 @@ serving:
   # -- Enable Knative Serving
   enabled: true
 
+# -- Knative Eventing
+eventing:
+  # -- Enable Knative Eventing
+  enabled: true
+
 # -- Knative Eventing NATS Streaming
 natss:
   # -- Enable Knative Eventing NATS Streaming
