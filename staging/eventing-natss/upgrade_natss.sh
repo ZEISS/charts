@@ -16,6 +16,7 @@ NATS_URL=https://github.com/knative-extensions/eventing-natss/releases/download/
 
 # Get all files, auto-apply PodDisruptionBudget patches
 curl -sSL ${NATS_URL}/eventing-natss.yaml > charts/nats/templates/eventing-natss.yaml
+curl -sSL ${NATS_URL}/eventing-jsm.yaml > charts/nats/templates/eventing-jsm.yaml
 
 # Bump app version
 sed "s/appVersion:.*/appVersion: \"v${NATS_TAG}\"/g" Chart.yaml > Chart.yaml.temp
