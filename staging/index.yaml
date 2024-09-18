@@ -24,4 +24,24 @@ entries:
     urls:
     - https://ZEISS.github.io/charts/staging/eventing-1.0.1.tgz
     version: 1.0.1
-generated: "2024-09-18T21:34:29.364849498Z"
+  knative:
+  - apiVersion: v2
+    appVersion: v1.15.4
+    created: "2024-09-18T21:37:26.525610213Z"
+    dependencies:
+    - condition: operator.enabled
+      name: operator
+      repository: ""
+      version: 1.15.4
+    description: 'Kubernetes-based platform to build, deploy, and manage modern serverless
+      workloads '
+    digest: 2fe436a35866fb83e98a45989aeafefd9b6f1046bb41a0c30585d9f8073b7b53
+    home: https://knative.dev/
+    icon: https://raw.githubusercontent.com/knative/docs/master/docs/images/logo/rgb/knative-logo-rgb.jpg
+    maintainers:
+    - name: katallaxie
+    name: knative
+    urls:
+    - https://ZEISS.github.io/charts/staging/knative-1.0.2.tgz
+    version: 1.0.2
+generated: "2024-09-18T21:37:26.523125959Z"
