@@ -10,5 +10,5 @@ icon: https://raw.githubusercontent.com/knative/docs/master/docs/images/logo/rgb
 appVersion: "v1.16.0"
 dependencies:
   - name: operator
-    version: 1.15.4
+    version: 1.16.0
     condition: operator.enabled
