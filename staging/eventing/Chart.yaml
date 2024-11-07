@@ -7,7 +7,7 @@ home: https://github.com/knative-extensions/eventing-natss
 maintainers:
   - name: katallaxie
 icon: https://raw.githubusercontent.com/nats-io/nats-server/main/logos/nats-server.png
-appVersion: "v1.15.0"
+appVersion: "v1.16.0"
 dependencies:
   - name: eventing-jsm
     version: 1.15.2
