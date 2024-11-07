@@ -3,19 +3,19 @@ entries:
   eventing:
   - apiVersion: v2
     appVersion: v1.16.0
-    created: "2024-11-07T09:36:33.904452543Z"
+    created: "2024-11-07T09:55:49.121965466Z"
     dependencies:
     - condition: jsm.enabled
       name: eventing-jsm
       repository: ""
-      version: 1.15.2
+      version: 1.16.0
     - condition: natss.enabled
       name: eventing-natss
       repository: ""
-      version: 1.15.2
+      version: 1.16.0
     description: 'A channel layer for Knative Eventing that uses NATS Streaming as
       the underlying messaging system. '
-    digest: f8eaa866eed2a7b69214440493607e2ccad522cb69fcad67c0830044948421cd
+    digest: cf68b3631da91aae4364758b33402aff16f7a7c2679e627ac4a9a327ba0fd61b
     home: https://github.com/knative-extensions/eventing-natss
     icon: https://raw.githubusercontent.com/nats-io/nats-server/main/logos/nats-server.png
     maintainers:
@@ -44,4 +44,4 @@ entries:
     urls:
     - https://ZEISS.github.io/charts/staging/knative-1.0.2.tgz
     version: 1.0.2
-generated: "2024-11-07T09:54:16.223863192Z"
+generated: "2024-11-07T09:55:49.120830659Z"
