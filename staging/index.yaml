@@ -26,16 +26,16 @@ entries:
     version: 1.0.1
   knative:
   - apiVersion: v2
-    appVersion: v1.15.4
-    created: "2024-09-18T21:37:26.525610213Z"
+    appVersion: v1.16.0
+    created: "2024-11-07T09:54:16.225953395Z"
     dependencies:
     - condition: operator.enabled
       name: operator
       repository: ""
-      version: 1.15.4
+      version: 1.16.0
     description: 'Kubernetes-based platform to build, deploy, and manage modern serverless
       workloads '
-    digest: 2fe436a35866fb83e98a45989aeafefd9b6f1046bb41a0c30585d9f8073b7b53
+    digest: fb9b17cef5f8fd0bd0251b1d8e00cc65ec2f663442bc7193b52be0248a252586
     home: https://knative.dev/
     icon: https://raw.githubusercontent.com/knative/docs/master/docs/images/logo/rgb/knative-logo-rgb.jpg
     maintainers:
@@ -44,4 +44,4 @@ entries:
     urls:
     - https://ZEISS.github.io/charts/staging/knative-1.0.2.tgz
     version: 1.0.2
-generated: "2024-11-07T09:36:33.903399587Z"
+generated: "2024-11-07T09:54:16.223863192Z"
