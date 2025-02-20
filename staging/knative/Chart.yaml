@@ -7,7 +7,7 @@ home: https://knative.dev/
 maintainers:
   - name: katallaxie
 icon: https://raw.githubusercontent.com/knative/docs/master/docs/images/logo/rgb/knative-logo-rgb.jpg
-appVersion: "v1.16.0"
+appVersion: "v1.17.3"
 dependencies:
   - name: operator
     version: 1.16.0

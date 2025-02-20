@@ -10,8 +10,8 @@ icon: https://raw.githubusercontent.com/nats-io/nats-server/main/logos/nats-serv
 appVersion: "v1.17.0"
 dependencies:
   - name: eventing-jsm
-    version: 1.16.0
+    version: 1.17.0
     condition: jsm.enabled
   - name: eventing-natss
-    version: 1.16.0
+    version: 1.17.0
     condition: natss.enabled

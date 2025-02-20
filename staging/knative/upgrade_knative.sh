@@ -9,7 +9,7 @@ set -xeuo pipefail
 shopt -s dotglob
 
 # Tags for current version of knative
-OPERATOR_TAG=1.16.0
+OPERATOR_TAG=1.17.3
 
 # Base URLs
 OPERATOR_URL=https://github.com/knative/operator/releases/download/knative-v${OPERATOR_TAG}
