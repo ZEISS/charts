@@ -9,7 +9,7 @@ set -xeuo pipefail
 shopt -s dotglob
 
 # Tags for current version of eventing-natss
-NATS_TAG=1.16.0
+NATS_TAG=1.17.0
 
 # Base URLs
 NATS_URL=https://github.com/knative-extensions/eventing-natss/releases/download/knative-v${NATS_TAG}
