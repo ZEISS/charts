@@ -6,6 +6,7 @@ GO_RELEASER 		?= $(GO_TOOL) github.com/goreleaser/goreleaser/v2
 GO_LINT 				?= $(GO_TOOL) github.com/golangci/golangci-lint/v2/cmd/golangci-lint
 GO_TOOL 				?= $(GO) tool
 GO_TEST 				?= $(GO_TOOL) gotest.tools/gotestsum --format pkgname
+GO_HUGO 				?= $(GO_TOOL) github.com/gohugoio/hugo
 
 # HELM
 HELM_INDEX 			?= $(GO_TOOL) github.com/zeiss/pkg/cmd/helm/index
@@ -31,8 +32,9 @@ release: ## Release the binary file.
 
 .PHONY: generate
 generate: ## Generate code.
-	$(HELM_INDEX) --repo $(REPO) --index public/staging/index.yaml --starts-with staging
-	$(HELM_INDEX) --repo $(REPO) --index public/stable/index.yaml --starts-with stable
+	$(GO) generate www
+	$(HELM_INDEX) --repo $(REPO) --index www/public/staging/index.yaml --starts-with staging
+	$(HELM_INDEX) --repo $(REPO) --index www/public/stable/index.yaml --starts-with stable
 	@echo "✅ Helm index generated successfully."
 
 .PHONY: clean

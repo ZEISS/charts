@@ -28,7 +28,7 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         id: deployment
         with:
-          path: ./public
+          path: ./www/public
 
   deploy:
     if: github.ref == 'refs/heads/main'
