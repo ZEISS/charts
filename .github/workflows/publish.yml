@@ -23,6 +23,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPO: ${{ github.repository }}
       - run: make generate
+        if: always()
         env:
           GITHUB_REPO: ${{ github.repository }}
       - uses: actions/upload-pages-artifact@v5
@@ -31,7 +32,7 @@ jobs:
           path: ./public
 
   deploy:
-    if: github.ref == 'refs/heads/main' && always()
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
