@@ -1,0 +1,6 @@
+dependencies:
+- name: operator
+  repository: ""
+  version: 1.17.3
+digest: sha256:5235210c9210371ffd65b6969bd9b289ee730de2362701fa2cbf0783bf9ac8e5
+generated: "2026-08-26T12:09:59.835996853Z"

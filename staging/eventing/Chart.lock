@@ -1,0 +1,9 @@
+dependencies:
+- name: eventing-jsm
+  repository: ""
+  version: 1.17.0
+- name: eventing-natss
+  repository: ""
+  version: 1.17.0
+digest: sha256:69d3dea9a8158fb34ff9c2494f50f1964922e7155e073d430504dfc6345d0a8f
+generated: "2026-08-26T12:18:38.244519886Z"
