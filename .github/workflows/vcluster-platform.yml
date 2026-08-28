@@ -1,4 +1,4 @@
-name: vcluster-oss
+name: vcluster-platform
 
 on:
   workflow_call:
