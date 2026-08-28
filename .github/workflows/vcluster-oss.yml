@@ -10,6 +10,7 @@ env:
 jobs:
   build:
     strategy:
+      fail-fast: false
       matrix:
         version: ["latest", "0.36.1"]
     runs-on: ubuntu-latest
