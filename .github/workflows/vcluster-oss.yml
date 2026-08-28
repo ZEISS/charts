@@ -9,10 +9,11 @@ env:
 
 jobs:
   build:
+    continue-on-error: ${{ matrix.version }}
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
-        version: ["latest", "0.36.1"]
+        version: [latest, 0.36.1]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
