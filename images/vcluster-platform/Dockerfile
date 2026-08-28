@@ -2,7 +2,7 @@
 ARG VCLUSTER_PLATFORM_VERSION="latest"
 
 # using the official vcluster OSS image as the base
-FROM ghcr.io/loft-sh/vcluster-platform:${VCLUSTER_PLATFORM_VERSION}
+FROM ghcr.io/loft-sh/vcluster-platform:${VCLUSTER_PLATFORM_VERSION} AS base
 WORKDIR /loft
 
 # we use alpine for easier debugging
