@@ -32,4 +32,4 @@ jobs:
             VCLUSTER_VERSION=${{ matrix.version }}
           push: true
           tags: ${{ env.REGISTRY }}/zeiss/charts/vcluster-oss:${{ matrix.version }}
-          platforms: linux/amd64,linux/arm64,linux/arm/v7
+          platforms: linux/amd64,linux/arm64
