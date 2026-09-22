@@ -1,0 +1,13 @@
+apiVersion: v2
+name: agent-platform
+version: 0.1.0
+description: |
+  This is a wrapper chart that deploys all the ingredients for configs for an agent platform.
+home: https://zeiss.github.io/charts
+maintainers:
+  - name: katallaxie
+appVersion: 0.1.0
+dependencies:
+  - name: vcl
+    version: 1.17.3
+    condition: operator.enabled

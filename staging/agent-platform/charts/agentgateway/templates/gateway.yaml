@@ -1,0 +1,16 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: {{ .Values.gateway.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    {{- include "agentgateway-platform.labels" . | nindent 4 }}
+spec:
+  gatewayClassName: {{ .Values.gateway.gatewayClassName }}
+  listeners:
+  - protocol: HTTP
+    port: {{ .Values.gateway.port }}
+    name: http
+    allowedRoutes:
+      namespaces:
+        from: All

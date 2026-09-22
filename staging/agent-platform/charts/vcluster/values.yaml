@@ -1,0 +1,24 @@
+# Deploy one release of this chart per team tenant cluster, e.g.:
+#
+#   helm upgrade -i team-a deploy/charts/vcluster-tenant \
+#     --namespace vcluster-team-a --create-namespace \
+#     -f deploy/charts/vcluster-tenant/examples/values-team-a.yaml
+#
+# Each release is a full, isolated Kubernetes API server (vCluster) running
+# inside its own namespace on the shared/control-plane cluster. Team
+# workloads deployed inside it (via `vcluster connect <team> -- kubectl ...`)
+# can reach the platform's Agentgateway at `ai-gateway.default.svc` thanks to
+# the service replication configured below.
+#
+# See examples/values-team-*.yaml for per-team overrides (resources, extra
+# sync rules, etc.) layered on top of these shared defaults.
+
+vcluster:
+  networking:
+    replicateServices:
+      # Sync the control-plane Agentgateway proxy Service into this tenant
+      # cluster so team workloads see a stable address regardless of where
+      # the gateway actually runs.
+      fromHost:
+        - from: agentgateway-system/agentgateway-proxy
+          to: default/ai-gateway
